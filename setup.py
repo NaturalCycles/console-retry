@@ -26,7 +26,7 @@ class VerifyVersionCommand(install):
 
 setuptools.setup(
     name="console_retry",
-    version="1.0.2",
+    version="1.0.3",
     author="Kristofer Borgström",
     description="This utility is designed to run any shell command and retry if no new line was written to"
                 "stdout within a specified timeout",
