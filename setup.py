@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import setuptools
+from setuptools.command.install import install
 import os
 import sys
 from console_retry.version import VERSION
@@ -9,7 +10,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 
-class VerifyVersionCommand(setuptools.command.install):
+class VerifyVersionCommand(install):
     """Custom command to verify that the git tag matches our version"""
     description = 'verify that the git tag matches our version'
 
