@@ -29,7 +29,7 @@ async def run_command(command, timeout=None):
     full_output = ""
     inner_timeout = 1
     # read line (sequence of bytes ending with b'\n') asynchronously
-    received_output = True # Not really true but we want to initilize timeout
+    received_output = True  # Not really true but we want to initilize timeout
     exit_now = False
     while True:
         if received_output:
@@ -79,7 +79,6 @@ async def run_command(command, timeout=None):
             timed_out = True
             process.kill()
             break
-
 
     returncode = await process.wait()
     elapsed = time.time() - start
@@ -132,7 +131,8 @@ def main():
 
                 for retry_output in args.retry_outputs:
                     if retry_output in output:
-                        print("RETRY: Found string: \"%s\" in command output, retrying despite error code" % retry_output)
+                        print("RETRY: Found string: \"%s\" in command output, retrying despite error code" %
+                              retry_output)
                         retry = True
                         break
 
