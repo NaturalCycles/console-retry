@@ -22,5 +22,4 @@ package:
 	python setup.py bdist_wheel
 
 test:
-	coverage run -m unittest discover
-	coverage html
+	echo "No tests yet, see readme"
